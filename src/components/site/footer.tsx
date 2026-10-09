@@ -66,11 +66,13 @@ export function Footer() {
         </div>
       </Container>
 
-      <Container className="flex flex-col gap-2 border-t border-border py-6 text-xs text-subtle-foreground sm:flex-row sm:items-center sm:justify-between">
+      <Container>
+        <div className="flex flex-col gap-2 border-t border-border py-6 text-xs text-subtle-foreground sm:flex-row sm:items-center sm:justify-between">
         <p>
           © <CopyrightYear /> {site.name}. All rights reserved.
         </p>
-        <p className="font-mono">Built for replies.</p>
+        <p className="font-mono">{footer.signoff}</p>
+        </div>
       </Container>
     </footer>
   );

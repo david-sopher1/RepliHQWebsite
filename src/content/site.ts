@@ -220,6 +220,7 @@ export const comparison = {
   eyebrow: "Compare",
   heading: "The honest math on outbound.",
   subhead: "Three ways to get meetings from cold email. Only one of them leaves you free to run your business.",
+  recommendedLabel: "Recommended",
   columns: ["RepliHQ", "Hire an SDR", "Do it yourself"],
   rows: [
     {
@@ -272,6 +273,7 @@ export const testimonials = {
   heading: "What clients say.",
   // TODO: replace with real client testimonials (with permission) and set placeholder: false.
   placeholder: true,
+  placeholderLabel: "Placeholder testimonials",
   items: [
     {
       quote: "Placeholder — add a real client quote here. One or two sentences on the specific result they got.",
@@ -294,6 +296,8 @@ export const testimonials = {
 export const faq = {
   eyebrow: "FAQ",
   heading: "Questions, answered.",
+  contactPrompt: "Something else on your mind?",
+  contactCta: "Ask us on a call",
   items: [
     {
       q: "How do you protect deliverability?",
@@ -329,17 +333,19 @@ export const faq = {
 
 export const finalCta = {
   eyebrow: "Book a call",
-  heading: "Let's fill your calendar.",
+  headline: { lead: "Let's fill your ", emphasis: "calendar." },
   // TODO: confirm call length / agenda.
   subhead:
     "Pick a time that works. In 30 minutes we'll map your ideal customer, your offer, and what a campaign would look like for you.",
   points: ["Your ICP and offer, pressure-tested", "A campaign outline you can keep", "No obligation"],
   fallback: "Calendar not loading?",
   fallbackLink: "Open the booking page",
+  loading: "Loading calendar…",
 };
 
 export const footer = {
   tagline: "Done-for-you cold email that books qualified meetings on your calendar.",
+  signoff: "Built for replies.",
   groups: [
     {
       title: "Product",

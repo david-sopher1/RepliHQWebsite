@@ -52,17 +52,15 @@ export function HeroVisual() {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { margin: "-10% 0px" });
   const reduce = useReducedMotion();
-  const [t, setT] = useState(INITIAL);
+  const [tick, setTick] = useState(INITIAL);
+  // Reduced motion: show the finished week, no loop.
+  const t = reduce ? FINAL : tick;
 
   useEffect(() => {
-    if (reduce) {
-      setT(FINAL);
-      return;
-    }
-    if (!inView) return;
+    if (reduce || !inView) return;
     const id = window.setInterval(() => {
       if (document.hidden) return;
-      setT((prev) => (prev >= LAST + HOLD ? START : prev + 1));
+      setTick((prev) => (prev >= LAST + HOLD ? START : prev + 1));
     }, TICK_MS);
     return () => window.clearInterval(id);
   }, [inView, reduce]);
@@ -112,7 +110,7 @@ export function HeroVisual() {
         {/* Inbox */}
         <div className="border-b border-border p-3 sm:p-4 md:border-r md:border-b-0">
           <PanelLabel icon={<Inbox className="size-3.5" />} label={heroDemo.inboxLabel} />
-          <ul className="mt-3 flex h-[17.5rem] flex-col gap-2 overflow-hidden sm:h-[18.5rem]">
+          <ul className="mt-3 flex h-[12.75rem] flex-col gap-2 overflow-hidden sm:h-[18.5rem]">
             <AnimatePresence initial={false} mode="popLayout">
               {visible.map((r) => (
                 <motion.li

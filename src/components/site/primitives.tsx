@@ -41,7 +41,7 @@ export function SectionHeader({
   return (
     <Reveal
       className={cn(
-        "flex max-w-2xl flex-col gap-5",
+        "flex max-w-3xl flex-col gap-5",
         align === "center" && "mx-auto items-center text-center",
         className,
       )}
