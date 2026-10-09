@@ -24,6 +24,11 @@ export const site = {
     "AI cold email",
     "email deliverability",
   ],
+  // Text on the generated social share image (src/app/opengraph-image.tsx).
+  og: {
+    tagline: "Done-for-you cold email · AI-automated · Fully managed",
+    badge: "Meeting booked",
+  },
   booking: {
     // TODO: replace with your Cal.com "username/event-slug" (e.g. "replihq/strategy-call").
     calLink: "replihq/strategy-call",
@@ -371,6 +376,12 @@ export const footer = {
       ],
     },
   ],
+};
+
+export const notFound = {
+  heading: "This page didn't get a reply.",
+  body: "The page you're looking for doesn't exist or has moved.",
+  cta: "Back to home",
 };
 
 /**
