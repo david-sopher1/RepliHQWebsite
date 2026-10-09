@@ -3,7 +3,7 @@ import { ArrowUpRight, Check } from "lucide-react";
 import { finalCta, site } from "@/content/site";
 import { Reveal } from "@/components/motion/reveal";
 import { Container, Eyebrow, Section } from "@/components/site/primitives";
-import { CalEmbed } from "@/components/sections/cal-embed";
+import { BookingEmbed } from "@/components/sections/booking-embed";
 
 export function FinalCta() {
   return (
@@ -50,8 +50,10 @@ export function FinalCta() {
           </p>
         </Reveal>
 
-        <Reveal delay={0.08} className="glass overflow-hidden rounded-2xl p-1.5 sm:p-2">
-          <CalEmbed />
+        {/* Capped at 600px: wider than that, Calendly pads its page with white margins
+            that can't be themed. At or below it, its card fills the frame edge to edge. */}
+        <Reveal delay={0.08} className="glass mx-auto w-full max-w-[600px] overflow-hidden rounded-2xl p-1.5 sm:p-2 lg:mx-0">
+          <BookingEmbed />
         </Reveal>
       </Container>
     </Section>

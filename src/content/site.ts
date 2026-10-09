@@ -30,12 +30,9 @@ export const site = {
     badge: "Meeting booked",
   },
   booking: {
-    // TODO: replace with your Cal.com "username/event-slug" (e.g. "replihq/strategy-call").
-    calLink: "replihq/strategy-call",
-    // Public booking page, used as a no-JS fallback and for "open in new tab".
-    get url() {
-      return `https://cal.com/${this.calLink}`;
-    },
+    // Calendly event link — embedded in the "Book a call" section and used as the
+    // "open in new tab" fallback.
+    url: "https://calendly.com/jaxon-replihq/30min",
   },
   socials: [
     // TODO: replace with your real profile URLs (remove any you don't use).
@@ -427,7 +424,7 @@ export const legal = {
       {
         heading: "Service providers",
         body: [
-          "We use trusted third parties to operate our business, including scheduling (Cal.com), hosting, and email infrastructure providers. They process data only on our instructions. TODO: list your actual subprocessors.",
+          "We use trusted third parties to operate our business, including scheduling (Calendly), hosting, and email infrastructure providers. They process data only on our instructions. TODO: list your actual subprocessors.",
         ],
       },
       {

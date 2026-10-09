@@ -2,7 +2,7 @@
 
 Single-page marketing site for RepliHQ (done-for-you cold email), plus `/privacy` and `/terms`.
 
-**Stack:** Next.js 16 (App Router, Cache Components) · TypeScript · Tailwind CSS v4 · shadcn/ui (Radix) · Motion · Lenis · Lucide · Cal.com embed
+**Stack:** Next.js 16 (App Router, Cache Components) · TypeScript · Tailwind CSS v4 · shadcn/ui (Radix) · Motion · Lenis · Lucide · Calendly embed
 
 ## Develop
 
@@ -21,7 +21,7 @@ npm run build && npm start
 - Sections with `placeholder: true` (logos, results, testimonials, legal) show a visible
   amber "Placeholder" label on the page until you set it to `false`, so unfinished content
   can't ship unnoticed.
-- The booking widget reads `site.booking.calLink` (`"username/event-slug"` on Cal.com).
+- The booking widget reads `site.booking.url` (your Calendly event link).
 
 ## Project layout
 
