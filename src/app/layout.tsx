@@ -20,6 +20,8 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
   display: "swap",
+  // Only used for small labels; don't let it compete with CSS for first-paint bandwidth.
+  preload: false,
 });
 
 const instrumentSerif = Instrument_Serif({
@@ -83,6 +85,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${geist.variable} ${geistMono.variable} ${instrumentSerif.variable}`}>
       <body className="min-h-dvh">
+        {/* Without JS, scroll-reveal content would stay hidden — show it. */}
+        <noscript>
+          <style>{`[style*="opacity:0"]{opacity:1!important;transform:none!important}`}</style>
+        </noscript>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

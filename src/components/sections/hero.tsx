@@ -31,7 +31,7 @@ export function Hero() {
 
         <h1
           id="hero-heading"
-          className="mt-7 max-w-4xl animate-fade-up text-[clamp(2.75rem,1.4rem+6.2vw,5.75rem)] leading-[0.98] font-semibold tracking-[-0.045em] text-balance"
+          className="mt-7 max-w-4xl animate-rise text-[clamp(2.75rem,1.4rem+6.2vw,5.75rem)] leading-[0.98] font-semibold tracking-[-0.045em] text-balance"
           style={delay(60)}
         >
           <span className="text-gradient">{hero.headline.lead}</span>
@@ -43,7 +43,7 @@ export function Hero() {
         </h1>
 
         <p
-          className="mt-7 max-w-2xl animate-fade-up text-base leading-relaxed text-pretty text-muted-foreground md:text-lg"
+          className="mt-7 max-w-2xl animate-rise text-base leading-relaxed text-pretty text-muted-foreground md:text-lg"
           style={delay(140)}
         >
           {hero.subhead}
