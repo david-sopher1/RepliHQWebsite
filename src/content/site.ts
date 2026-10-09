@@ -9,10 +9,10 @@
 
 export const site = {
   name: "RepliHQ",
-  // TODO: replace with your production domain (used for canonical URLs, sitemap, OG, JSON-LD).
+  // Production domain (used for canonical URLs, sitemap, OG, JSON-LD).
   url: "https://replihq.com",
-  // TODO: replace with your real contact address.
-  email: "hello@replihq.com",
+  // Contact address shown in the footer, FAQ, legal pages, and JSON-LD.
+  email: "jaxon@replihq.com",
   title: "RepliHQ — Done-for-you cold email that books meetings",
   description:
     "RepliHQ runs fully managed, AI-automated cold email campaigns for B2B companies and books qualified meetings straight onto your calendar. You just show up.",
